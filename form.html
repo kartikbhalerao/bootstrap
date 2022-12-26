@@ -21,8 +21,8 @@
                     <input type="text" name="" class="form-control" id="">
                 </div>
                 <div class="form-group">
-                    <label for="form-label">E-mail</label>
-                    <input type="email" name="" class="form-control" id="">
+                    <label for="form-label">Lastname</label>
+                    <input type="lastname" name="" class="form-control" id="">
                 </div>
                 <div class="form-group">
                     <label>Hobbies</label>
@@ -49,10 +49,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label for="form-label">Lastname</label>
-                    <input type="text" name="" class="form-control" id="">
+                    <label for="form-label">email</label>
+                    <input type="email" name="" class="form-control" id="">
                 </div>
                 <div class="form-group">
                     <label for="form-label">phone no.</label>
@@ -68,8 +68,52 @@
                 </div>
                 <div class="form-group">
                     <label for="form-label">Price</label>
-                    <input type="range" name="" class="form-control-range success" id="">
+                    <input type="range" name="" class="form-control-range " id="">
                 </div>
+                <form>
+                    <div class="form-group">
+                        <label for="form-label">Gender</label>
+                      <div class="form-check">
+                        <label class="form-check-label" for="male">male</label>
+                        <input type="radio" name="gen" class="form-check-input" id="male">
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="female">female</label>
+                        <input type="radio" name="gen" class="form-check-input" id="female">
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="other">other</label>
+                        <input type="radio" name="gen" class="form-check-input" id="other">
+                      </div>
+                    </div>
+                      <div class="form-group">
+                   
+                   
+                        <label for="">country</label>
+                        
+                        <select class="form-group-select">
+                        <option value="">india</option>
+                        <option value="">thailand</option>
+                        <option value="">south korea</option>
+                        <option value="">france</option>
+                        </select>
+                    
+                    </div><br><br>
+
+                </form>
+                <form class="was-validated">
+                    <div class="form-group">
+                        <input type="text" class="form-control" required>
+                        <div class="invalid-feedback">
+                            404 error?
+                        </div>
+                        <div class="valid-feedback">
+                            correct form...!
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-3">submit</button>
+
+                </form>
 
 
 
@@ -78,5 +122,26 @@
     
 
     <script src="bootstrap-5.2.3-dist\js\bootstrap.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
 </body>
 </html>
